@@ -1,5 +1,10 @@
 <?php
 
+// Enable error reporting to diagnose the 500 error on Vercel
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
 // Vercel serverless environment is read-only except for the '/tmp' directory.
 // Set up directory paths for Laravel's runtime storage.
 $storagePath = '/tmp/storage';
